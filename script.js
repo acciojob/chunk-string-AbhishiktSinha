@@ -9,6 +9,8 @@ function stringChop(str, size) {
             chunk = str.slice(0, size);
         else{
             chunk = str.slice(0);
+	        chunkArray.push(chunk);
+			break;
         }
         
         str = str.slice(size);
