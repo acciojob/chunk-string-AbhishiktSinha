@@ -2,11 +2,18 @@ function stringChop(str, size) {
   // your code here
 	let chunkArray = [];
     
-    do {
-        let chunk = str.slice(0, size);
+    while(str.length > 0) {
+        let chunk;
+
+        if(str.length >= size)
+            chunk = str.slice(0, size);
+        else{
+            chunk = str.slice(0);
+        }
+        
         str = str.slice(size);
         chunkArray.push(chunk);
-    }while(str.length > 0);
+    }
 
     return chunkArray;
 }
